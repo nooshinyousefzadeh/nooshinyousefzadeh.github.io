@@ -41,18 +41,16 @@
                     <div class="text_content">Follow me</div>
                     <div class="clear"></div>
                 </div>
-
-            
-
-                    <div id="profile_social">
-                         <a href="{{site.scholar}}"><i class="fab fa-google-scholar"></i></a>
-                         <a href="{{site.researchgate}}"><i class="fa fa-graduation-cap"></i></a>
-                         <a href="{{site.X}}"><i class="fa fa-x-twitter"></i></a>
-                         <a href="{{site.linkedin}}"><i class="fa fa-linkedin"></i></a>
+                    <div class="title_content tiltle_contacts" style="float: none;">
+                        <div class="text_content">Follow me</div>
+                        <div class="clear"></div>
                     </div>
-      
-
-
+                    <div id="profile_social">
+                        <a href="{{site.scholar}}"><i class="fab fa-google-scholar"></i></a>
+                        <a href="{{site.researchgate}}"><i class="fa fa-graduation-cap"></i></a>
+                        <a href="{{site.X}}"><i class="fab fa-x-twitter"></i></a>
+                        <a href="{{site.linkedin}}"><i class="fab fa-linkedin"></i></a>
+                    </div>
             </div>
 
             <div class="col-md-7">
@@ -64,12 +62,8 @@
 
                 <div class="contact-form">
                     <!--<h3 class="main-heading"><span>Let's keep in touch</span></h3>-->
-
-
-
                     <div id="contact-status"></div>
-
-                    <form action="#" id="contactform">
+                    <form id="contactform" action="mailto:nooshinyousefzad@ufl.edu" method="post" enctype="text/plain">
                         <p class="form-group" id="contact-name">
                             <label for="name">Your Name</label>
                             <input type="text" name="name" class="form-control name-contact" id="inputSuccess" placeholder="Name..." />
@@ -84,12 +78,9 @@
                             <textarea name="message" cols="88" rows="6" class="form-control message-contact" id="inputError" placeholder="Message..."></textarea>
                         </p>
                         <input type="reset" name="reset" value="CLEAR" class="reset">
-                        <!-- <input type="submit" name="submit" value="SEND MESSAGE" class="submit">-->
-
                         <section class="button-demo" style="display: inline-block;">
-                            <button class="ladda-button submit send_email" name="submit" data-color="green" data-style="expand-left">SEND MESSAGE</button>
+                            <button class="ladda-button submit send_email" name="submit" type="submit" data-color="green" data-style="expand-left">SEND MESSAGE</button>
                         </section>
-
                     </form>
                 </div>
                 <!-- /Contact Form -->

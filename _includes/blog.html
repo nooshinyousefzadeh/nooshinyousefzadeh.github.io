@@ -1,7 +1,97 @@
 <!-- .blog -->
-<div id="blog" class="content_2">
-<h1 class="h-bloc">Publications</h1><br> 
-      <ul>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publications</title>
+
+    <style>
+        /* Enhanced styling for the publications section */
+        #blog {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #2c3e50;
+            padding: 30px;
+            background-color: #f9f9f9;
+        }
+
+        #blog .h-bloc {
+            font-size: 2.5em;
+            font-weight: 300;
+            color: #2980b9;
+            margin-bottom: 40px;
+            position: relative;
+            text-transform: uppercase;
+        }
+
+        #blog .h-bloc:after {
+            content: '';
+            width: 80px;
+            height: 4px;
+            background: #3498db;
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+        }
+
+        #blog ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        #blog li {
+            background: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        #blog li:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+        }
+
+        #blog .title {
+            font-size: 1.3em;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 8px;
+            line-height: 1.5;
+        }
+
+        #blog .journal {
+            font-style: italic;
+            color: #6c7a89;
+            margin-bottom: 8px;
+        }
+
+        #blog .year {
+            font-weight: 400;
+            color: #95a5a6;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="blog" class="content_2">
+        <h1 class="h-bloc">Publications</h1><br> 
+        <ul>
+            <li>
+                    <p class="title">A Comprehensive Survey on Multilayered Graph Embedding Methods</p>
+                    <p class="journal">Vietnam Journal of Computer Science</p>
+                    <p class="year">Year: 2025</p>
+            </li>
+            <li>
+                    <p class="title">TGDT: A Temporal Graph-based Digital Twin for Urban Traffic Corridors</p>
+                    <p class="journal">IEEE Intelligent Transportation Systems Conference</p>
+                    <p class="year">Year: 2025</p>
+            </li>
             <li>
                     <p class="title">Dynamic Graph Attention Networks for Travel Time Distribution Prediction in Urban Arterial Roads</p>
                     <p class="journal">ITS World Congress</p>
@@ -9,7 +99,7 @@
             </li>
             <li>
                     <p class="title">MTDT: A Multi-Task Deep Learning Digital Twin</p>
-                    <p class="journal">IEEE Intelli- gent Transportation Systems Conference</p>
+                    <p class="journal">IEEE Intelligent Transportation Systems Conference</p>
                     <p class="year">Year: 2024</p>
             </li>
             <li>
@@ -26,10 +116,9 @@
                     <p class="title">Questionable Fairness in Federated Learning</p>
                     <p class="journal">International Conference on Data Science and Machine Learning Applications</p>
                     <p class="year">Year: 2024</p>
-      </ul>
-    
-
-
-
-                                            </div>
-                                            <!-- End .blog -->
+            </li>
+        </ul>
+    </div>
+    </body>
+</html>
+<!-- End .blog -->

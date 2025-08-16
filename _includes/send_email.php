@@ -24,12 +24,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email_content .= "Message:\n$message\n";
 
     // Build the email headers
-    $fromEmail = $recipient;
+    $fromEmail = no-reply@ufl.edu; #// replace with your server/domain email
     $email_headers  = "From: Website Contact <{$fromEmail}>\r\n";
     $email_headers .= "Reply-To: {$name} <{$email}>\r\n";
     $email_headers .= "MIME-Version: 1.0\r\n";
     $email_headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
 
+    if (mail($recipient, $subject, $email_content, $email_headers)) {
+        http_response_code(200);
+        echo "Thank You! Your message has been sent.";
+    } else {
+        http_response_code(500);
+        echo "Oops! Something went wrong and we couldn't send your message.";
+    }
 
     // Send the email
     if (mail($recipient, $subject, $email_content, $email_headers)) {

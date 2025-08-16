@@ -388,7 +388,9 @@ h2.resp-accordion:first-child {
 .icon-list {
     font-size: 40px !important;
     left: 15px !important;
-    text-align: center !important;
+	display: flex;
+	justify-content: center;
+	align-items: center;
     position: relative;
     top: 2px;
 }

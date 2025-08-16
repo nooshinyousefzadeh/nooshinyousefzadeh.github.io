@@ -1,33 +1,38 @@
 <?php
-// Ensure the script only runs for a GET request
-if ($_SERVER['REQUEST_METHOD'] === 'GET') {
+// IMPORTANT: The file path is now set to your _includes folder.
+$file = $_GET['file'];
 
-    // IMPORTANT: Sanitize and validate the filename to prevent directory traversal attacks
-    $filename = basename($_GET['file']);
+// --- SECURITY CHECK ---
+// Use basename() to prevent directory traversal attacks.
+$safe_file = basename($file);
 
-    // Define the directory where your files are stored (it should be outside the web root if possible)
-    $file_path = 'path/to/your/files/' . $filename; // <-- **Change this to your file directory**
+// Define the directory where your files are stored.
+$file_directory = '_includes/';
 
-    // Check if the file exists on the server
-    if (file_exists($file_path)) {
-        // Set the appropriate headers for a file download
-        header('Content-Description: File Transfer');
-        header('Content-Type: application/octet-stream');
-        header('Content-Disposition: attachment; filename="' . $filename . '"');
-        header('Expires: 0');
-        header('Cache-Control: must-revalidate');
-        header('Pragma: public');
-        header('Content-Length: ' . filesize($file_path));
+// Build the full path to the file
+$file_path = $file_directory . $safe_file;
 
-        // Read the file and send its contents to the user
-        readfile($file_path);
-        
-        // Exit the script
-        exit;
-    } else {
-        // File does not exist, show an error
-        http_response_code(404);
-        die('File not found!');
-    }
+// --- CHECK IF FILE EXISTS ---
+if (!file_exists($file_path)) {
+    http_response_code(404);
+    die('Error: The requested file was not found.');
 }
+
+// --- SEND HTTP HEADERS FOR DOWNLOAD ---
+if (ob_get_level()) {
+    ob_end_clean();
+}
+
+header('Content-Description: File Transfer');
+header('Content-Type: application/octet-stream');
+header('Content-Disposition: attachment; filename="' . basename($file_path) . '"');
+header('Expires: 0');
+header('Cache-Control: must-revalidate');
+header('Pragma: public');
+header('Content-Length: ' . filesize($file_path));
+
+// --- READ AND OUTPUT THE FILE ---
+readfile($file_path);
+
+exit;
 ?>

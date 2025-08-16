@@ -1936,41 +1936,36 @@
 
             <div class="col-md-7">
                 <!-- Contact Form -->
-                <div class="title_content" style="float: none;">
-                    <div class="text_content">Let's keep in touch</div>
-                    <div class="clear"></div>
-                </div>
-
-                <div class="contact-form">
-                    <!--<h3 class="main-heading"><span>Let's keep in touch</span></h3>-->
-
-
-
-                    <div id="contact-status"></div>
-
-                    <form action="#" id="contactform">
-                        <p class="form-group" id="contact-name">
-                            <label for="name">Your Name</label>
-                            <input type="text" name="name" class="form-control name-contact" id="inputSuccess" placeholder="Name..." />
-                        </p>
-                        <p class="form-group" id="contact-email"> 
-                            <label for="email">Your Email</label>
-                            <input type="text" name="email" class="form-control email-contact" id="inputSuccess" placeholder="Email..." />
-                        </p>
-
-                        <p class="form-group" id="contact-message">
-                            <label for="message">Your Message</label>
-                            <textarea name="message" cols="88" rows="6" class="form-control message-contact" id="inputError" placeholder="Message..."></textarea>
-                        </p>
-                        <input type="reset" name="reset" value="CLEAR" class="reset">
-                        <!-- <input type="submit" name="submit" value="SEND MESSAGE" class="submit">-->
-
-                        <section class="button-demo" style="display: inline-block;">
-                            <button class="ladda-button submit send_email" name="submit" data-color="green" data-style="expand-left">SEND MESSAGE</button>
-                        </section>
-
-                    </form>
-                </div>
+				<div class="title_content" style="float: none;">
+				    <div class="text_content">Let's keep in touch</div>
+				    <div class="clear"></div>
+				</div>
+				<div class="contact-form">
+				    <div id="contact-status"></div>
+				
+				    <form action="#" id="contactform">
+				        <div class="form-group" id="contact-name">
+				            <label for="name">Your Name</label>
+				            <input type="text" name="name" class="form-control name-contact" id="name" placeholder="Name..." required />
+				        </div>
+				        <div class="form-group" id="contact-email"> 
+				            <label for="email">Your Email</label>
+				            <input type="email" name="email" class="form-control email-contact" id="email" placeholder="Email..." required />
+				        </div>
+				        <div class="form-group" id="contact-message">
+				            <label for="message">Your Message</label>
+				            <textarea name="message" cols="88" rows="6" class="form-control message-contact" id="message" placeholder="Message..." required></textarea>
+				        </div>
+				
+				        <input type="reset" name="reset" value="CLEAR" class="reset">
+				
+				        <section class="button-demo" style="display: inline-block;">
+				            <button type="submit" class="ladda-button submit send_email" name="submit" data-color="green" data-style="expand-left">
+				                SEND MESSAGE
+				            </button>
+				        </section>
+				    </form>
+				</div>
                 <!-- /Contact Form -->
             </div>
         </div>

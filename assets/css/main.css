@@ -388,10 +388,8 @@ h2.resp-accordion:first-child {
 
 .icon-list {
     font-size: 40px !important;
-    left: 15px !important;
-    text-align: center !important;
-    position: relative;
-    top: 2px;
+	text-align: center !important;
+	margin: 0 auto;
 }
 p {
     font-size: 14px;

@@ -151,8 +151,7 @@ a:hover {
     -ms-border-radius: 50%;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
-    line-height: 43px;
-	align-items: center;
+    align-items: center; 
 }
 
 #verticalTab {

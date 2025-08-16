@@ -165,7 +165,7 @@ l.resp-tabs-list, p {
 }
 .resp-tabs-list li {
     font-size: 13px;
-    display: inline-block;
+    display: flex;
     padding: 13px 15px;
     margin: 0;
     list-style: none;
@@ -234,13 +234,14 @@ h2.resp-tab-title:last-child {
     margin-bottom: 10px;
 }
 .resp-vtabs .resp-tabs-list li {
-    display: block;
+    display: flex;
     padding: 17px !important;
     margin: 0;
     cursor: pointer;
     float: left;
-    text-align: center;
+    align-items: center;
     box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.2);
+	justify-content: center;
 }
 
 .resp-vtabs .resp-tabs-list li:first-child {

@@ -138,12 +138,11 @@ a:hover {
     -webkit-transition: background 0.3s, color 0.3s, box-shadow 0.3s;
     -moz-transition: background 0.3s, color 0.3s, box-shadow 0.3s;
     transition: background 0.3s, color 0.3s, box-shadow 0.3s;
-    display: inline-block;
+    display: flex;
     cursor: pointer;
     margin: 0;
     width: 42px !important;
     height: 42px !important;
-    text-align: center;
     position: relative;
     z-index: 2;
     border-radius: 50%;
@@ -151,7 +150,8 @@ a:hover {
     -ms-border-radius: 50%;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
-    line-height: 43px;
+	justify-content: center;
+	align-items: center;
 }
 
 #verticalTab {

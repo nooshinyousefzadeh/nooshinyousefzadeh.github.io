@@ -66,14 +66,28 @@ layout: default
     	
         
         <!-- Profile Description -->
-        <div class="blinq_qr" id="blinq_qr" style="display: block;">
-		    <figure>
-		        <img class="qr-image" src="images/img/BlinqMe.png" width="150" height="150" alt="BlinqMe QR Code" />
-		        <figcaption>Scan this QR code for BlinqMe</figcaption>
-		    </figure>
-		</div>
+		<style>
+		  /* Full page container with flex centering */
+		  body, html {
+		    height: 100%;
+		    margin: 0;
+		  }
+		  .center-container {
+		    display: flex;
+		    justify-content: center; /* horizontal center */
+		    align-items: center;     /* vertical center */
+		    height: 100vh;           /* full viewport height */
+		  }
+		</style>
 		
-    </div>
+		<div class="center-container">
+		  <div class="blinq_qr" id="blinq_qr" style="display: block;">
+		    <figure>
+		      <img class="qr-image" src="images/img/BlinqMe.png" width="150" height="150" alt="BlinqMe QR Code" />
+		      <figcaption>Scan this QR code for BlinqMe</figcaption>
+		    </figure>
+		  </div>
+		</div>
     <!-- End profile information -->
   
 </div>                                      
@@ -277,6 +291,7 @@ layout: default
 
 
        
+
 
 
 

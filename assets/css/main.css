@@ -379,10 +379,10 @@ h2.resp-accordion:first-child {
 
 }
 .tite-list {
-    padding-left: 100px !important;
+    padding-left: 10px !important;
     font-size: 13px;
     position: relative;
-    top: -6px;
+    top: -1px;
     display:none;
 }
 

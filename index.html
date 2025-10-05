@@ -73,14 +73,36 @@ layout: default
             
         </div>
         <!-- End Profile Description -->  
+		<style>
+		  /* Full viewport container to center content */
+		  .blinq_qr_container {
+		    display: flex;
+		    justify-content: center;  /* horizontal center */
+		    align-items: center;      /* vertical center */
+		    height: 100vh;            /* full viewport height */
+		  }
+		
+		  /* QR code container */
+		  .blinq_qr {
+		    display: block;
+		  }
+		
+		  /* Image scaled to 10% */
+		  .blinq_qr img {
+		    transform: scale(0.1);
+		    transform-origin: center;
+		    width: 1500px;   /* 150 / 0.1 to keep original resolution */
+		    height: 1500px;
+		    display: block;
+		  }
+		</style>
+		
 		<div class="blinq_qr_container">
 		  <div class="blinq_qr" id="blinq_qr">
 		    <img class="qr-image" src="images/img/BlinqMe.png" alt="BlinqMe QR Code" />
 		  </div>
 		</div>
 		
-        
-
     </div>
     <!-- End profile information -->
   
@@ -285,6 +307,7 @@ layout: default
 
 
        
+
 
 
 

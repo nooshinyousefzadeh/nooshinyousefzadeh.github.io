@@ -1042,27 +1042,6 @@ ul.about {
     width: 150px;
     height: 150px;
 }
-/* Full viewport container to center content */
-.widget-profil .blinq_qr_container {
-    display: flex;
-    justify-content: center;  /* horizontal center */
-    align-items: center;      /* vertical center */
-    height: 100vh;            /* full viewport height */
-  }
-
-  /* QR code container */
-.widget-profil .blinq_qr {
-    display: block;
-  }
-
-  /* Image scaled to 10% */
-.widget-profil .blinq_qr img {
-    transform: scale(0.1);
-    transform-origin: center;
-    width: 1500px;   /* 150 / 0.1 to keep original resolution */
-    height: 1500px;
-    display: block;
-  }
 .widget-profil .head-image{
     position: absolute;
     top: 0;

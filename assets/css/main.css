@@ -1034,17 +1034,18 @@ ul.about {
 #profile_social a:hover{
     background-color: #fff;
 }
-.center-container {
+.widget-profil .center-container {
 display: flex;
 justify-content: center; /* horizontal center */
 align-items: center;     /* vertical center */
 height: 100vh;           /* full viewport height */
 }
 .widget-profil .image-holder{
-    position: relative;
-    margin: 15px auto;
-    width: 150px;
-    height: 150px;
+	transform: scale(0.1);
+    display: flex;
+    justify-content: center; /* horizontal center */
+    align-items: center;     /* vertical center */
+    height: 100vh;           /* full viewport height */
 }
 .widget-profil .head-image{
     position: absolute;

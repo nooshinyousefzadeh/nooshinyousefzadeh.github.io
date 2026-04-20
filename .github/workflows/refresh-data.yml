@@ -1,0 +1,48 @@
+name: Refresh Data
+
+on:
+    workflow_dispatch:
+        inputs:
+            url:
+                description: "Data source URL (overrides DATA_SOURCE_URL secret)"
+                required: false
+                default: ""
+    schedule:
+        - cron: "0 0 * * *"
+
+jobs:
+    refresh:
+        runs-on: ubuntu-latest
+        permissions:
+            contents: write
+
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v4
+
+            - name: Fetch data
+              env:
+                  INPUT_URL: ${{ github.event.inputs.url }}
+                  SECRET_URL: ${{ secrets.DATA_SOURCE_URL }}
+              run: |
+                  DATA_URL="${INPUT_URL:-$SECRET_URL}"
+                  if [ -z "$DATA_URL" ]; then
+                    echo "No data URL configured. Set DATA_SOURCE_URL secret or pass one via workflow input."
+                    echo "Skipping data refresh."
+                    exit 0
+                  fi
+                  echo "Fetching data from $DATA_URL"
+                  curl -fsSL "$DATA_URL" -o _data/refresh.json
+                  echo "Data fetched successfully."
+
+            - name: Commit updated data
+              run: |
+                  git config user.name "github-actions[bot]"
+                  git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+                  if git diff --quiet; then
+                    echo "No changes to commit."
+                  else
+                    git add _data/
+                    git commit -m "chore: refresh data [skip ci]"
+                    git push
+                  fi
